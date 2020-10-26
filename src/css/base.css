@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --orange-express: #faa61a;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.bg-express {
+  background-color: var(--orange-express);
+}
+
+.text-express {
+  color: var(--orange-express);
+}
+
+.glide__arrow {
+  border: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.glide__arrow__custom {
+  padding: 0px !important;
+}
+
+/* Tab content - closed */
+.tab-content {
+  max-height: 0;
+  -webkit-transition: max-height 0.35s;
+  -o-transition: max-height 0.35s;
+  transition: max-height 0.35s;
+}
+/* :checked - resize to full height */
+.tab input:checked ~ .tab-content {
+  max-height: 50vh;
+}
+/* Label formatting when open */
+.tab input:checked + label {
+  /*@apply text-xl p-5 border-l-2 border-orange-500 bg-gray-100 text-indigo*/
+  font-size: 1.25rem; /*.text-xl*/
+  padding: 1.25rem; /*.p-5*/
+  border-left-width: 2px; /*.border-l-2*/
+  border-color: var(--orange-express);
+  background-color: #f8fafc; /*.bg-gray-100 */
+  color: var(--orange-express);
+}
+/* Icon */
+.tab label::after {
+  float: right;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  text-align: center;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+}
+/* Icon formatting - closed */
+.tab input[type='checkbox'] + label::after {
+  content: '+';
+  font-weight: bold; /*.font-bold*/
+  border-width: 1px; /*.border*/
+  border-radius: 9999px; /*.rounded-full */
+  border-color: #b8c2cc; /*.border-grey*/
+}
+.tab input[type='radio'] + label::after {
+  content: '\25BE';
+  font-weight: bold; /*.font-bold*/
+  border-width: 1px; /*.border*/
+  border-radius: 9999px; /*.rounded-full */
+  border-color: #b8c2cc; /*.border-grey*/
+}
+/* Icon formatting - open */
+.tab input[type='checkbox']:checked + label::after {
+  transform: rotate(315deg);
+  background-color: var(--orange-express);
+  color: #f8fafc; /*.text-grey-lightest*/
+}
+.tab input[type='radio']:checked + label::after {
+  transform: rotateX(180deg);
+  background-color: var(--orange-express);
+  color: #f8fafc; /*.text-grey-lightest*/
+}
+
+.active {
+  background-color: blue;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{> partials/gtm.head}}
+  <title>{{ htmlWebpackPlugin.options.title }}</title>
+</head>
+
+<body class="bg-orange-100">
+  {{> partials/gtm.body}}
+  <div class="md:flex flex-col md:flex-row md:min-h-screen w-full">
+
+    <!-- navbar -->
+    {{> partials/nav}}
+    <!-- /navbar -->
+
+    <!-- main -->
+    <main
+      class="mx-auto max-w-full px-4 md:max-w-screen-lg md:px-0 flex-1 overflow-y-auto text-center md:flex flex-col items-center justify-center">
+      <h2 class="text-2xl font-bold text-express">Compra Telef&oacute;nica</h2>
+      <p class="text-gray-800">Llamanos y hac&eacute; tu compra de lunes a s&aacute;bados de 12 a 14hs en las siguientes
+        sucursales Express
+      </p>
+
+      <div id="wrapper" class="container mx-auto"></div>
+
+    </main>
+    <!-- /main -->
+
+
+  </div>
+
+  <!-- footer -->
+  {{> partials/footer}}
+  <!-- /footer -->
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{> partials/gtm.head}}
+  <title>{{ htmlWebpackPlugin.options.title }}</title>
+  {{> partials/opg}}
+</head>
+
+<body class="bg-orange-100">
+  {{> partials/gtm.body}}
+  <div class="md:flex flex-col md:flex-row md:min-h-screen w-full">
+
+    <!-- navbar -->
+    {{> partials/nav}}
+    <!-- /navbar -->
+
+    <!-- main -->
+    <main
+      class="mx-auto max-w-full px-4 md:max-w-screen-lg md:px-0 flex-1 overflow-y-auto md:flex flex-col items-center justify-center">
+      {{> partials/slider}}
+
+      {{> partials/cards}}
+
+    </main>
+    <!-- /main -->
+
+
+  </div>
+
+  <!-- footer -->
+  {{> partials/footer}}
+  <!-- /footer -->
+</body>
+
+</html>
